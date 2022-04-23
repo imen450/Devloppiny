@@ -11,7 +11,7 @@ public interface ICourseService {
 	public void insertchapterInCourse(Long id_course);
 	public List<course> getAllCourse();
 	public void delete(long courseId);
-	public boolean update(course course);
+	public user update(course course);
 	public List<course> searchCourseByName(String name);
 	List<course> findAllByProfesor(professor profesor);
 	List<Feedback> affihcerFeedbacks(Long id_course);

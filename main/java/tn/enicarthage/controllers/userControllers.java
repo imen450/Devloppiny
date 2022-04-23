@@ -23,7 +23,7 @@ public class userControllers {
 	
 	@PostMapping("/Add_user")
 	@ResponseBody
-	public void addCourse(@RequestBody user u) {
+	public void adduser(@RequestBody user u) {
 		US.create(u);
 	}
 

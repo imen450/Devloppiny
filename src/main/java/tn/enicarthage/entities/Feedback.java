@@ -22,7 +22,7 @@ public class Feedback implements Serializable {
 	@Id
 	@GeneratedValue(strategy = GenerationType.AUTO)
 	@Column(name="FEED_ID")
-	private Long id;
+	private long id;
 	
 	@Column(name="FB_msg")
 	private String feedback;
@@ -30,11 +30,26 @@ public class Feedback implements Serializable {
 	@ManyToOne(cascade = CascadeType.ALL,fetch = FetchType.EAGER)
 	private Student student;
 
-	public Long getId() {
+	
+	public Feedback(long id, String feedback, Student student) {
+		super();
+		this.id = id;
+		this.feedback = feedback;
+		this.student = student;
+	}
+
+	public Feedback() {
+		
+		this.id = this.getId();
+		this.feedback = this.getFeedback();
+		this.student = this.getStudent();
+	}
+
+	public long getId() {
 		return id;
 	}
 
-	public void setId(Long id) {
+	public void setId(long id) {
 		this.id = id;
 	}
 

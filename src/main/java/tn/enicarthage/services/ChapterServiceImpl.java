@@ -1,6 +1,7 @@
 package tn.enicarthage.services;
 
 import java.util.ArrayList;
+
 import java.util.List;
 
 import org.apache.logging.log4j.LogManager;
@@ -41,7 +42,7 @@ public class ChapterServiceImpl implements IChapterService{
 	}
 
 	@Override
-	public List<String> getChapterNameByCourse(Long id_course) {
+	public List<String> getChapterNameByCourse(long id_course) {
 		List<String> chap_nom = new ArrayList<String>();
 		List<chapter> chapters =cor.findById( id_course).get().getChapitres();
 		for(chapter chp : chapters) {
@@ -54,7 +55,8 @@ public class ChapterServiceImpl implements IChapterService{
 }
 
 	@Override
-	public chapter creatChap(chapter chap) {
-		return CR.save(chap);
+	public chapter creatChap() {
+		chapter c=new chapter();
+		return CR.save(c);
 		
 	}}

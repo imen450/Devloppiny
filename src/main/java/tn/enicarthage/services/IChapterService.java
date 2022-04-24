@@ -7,9 +7,9 @@ import tn.enicarthage.entities.chapter;
 
 public interface IChapterService {
 	
-	public chapter creatChap(chapter chap);
+	public chapter creatChap();
 	public List<chapter> getAllChapter();
 	public boolean delete(long chapter_id);
 	public boolean update(chapter chap);
-	public List<String> getChapterNameByCourse(Long id_course);
+	public List<String> getChapterNameByCourse(long id_course);
 }

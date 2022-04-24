@@ -32,7 +32,7 @@ public class CourseService implements ICourseService {
 	}
 
 	@Override
-	public void insertchapterInCourse(Long id_course) {
+	public void insertchapterInCourse(long id_course) {
 		chapter chap = new chapter() ;
 		course cou = cor.findById(id_course).orElse(null);
 		cou.getChapitres().add(chap);
@@ -79,7 +79,7 @@ public class CourseService implements ICourseService {
 	}
 
 	@Override
-	public List<Feedback> affihcerFeedbacks(Long id_course) {
+	public List<Feedback> afficherFeedbacks(long id_course) {
 		course cou = cor.findById(id_course).orElse(null);
 		List<Feedback> feedbacks= cou.getFeedbacks();
 		return feedbacks;

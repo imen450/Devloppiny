@@ -6,5 +6,5 @@ import tn.enicarthage.entities.Feedback;
 
 public interface IStudentService {
 
-	public List<Feedback> getFeedbackByStudent(Long id);
+	public List<Feedback> getFeedbackByStudent(long id);
 }

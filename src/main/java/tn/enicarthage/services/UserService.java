@@ -4,11 +4,12 @@ import java.util.List;
 
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
 
 import tn.enicarthage.Repository.userRepository;
 import tn.enicarthage.entities.Role;
 import tn.enicarthage.entities.user;
-
+@Service
 public class UserService implements IUserService {
 	
 	@Autowired
@@ -24,8 +25,7 @@ public class UserService implements IUserService {
 		 String tel=user.getTel();
 		String country=user.getCountry();
 		Role role=user.getRole();
-		user u=new user(id_user, name,surname,pseudo, email,  tel, country,
-				 role);
+		user u=new user(id_user, name,surname,pseudo, email,  tel, country,role);
 		 UR.save(u);
 	}
 
@@ -35,7 +35,7 @@ public class UserService implements IUserService {
 	}
 
 	@Override
-	public void delete(Long userId) {
+	public void delete(long userId) {
         UR.deleteById(userId);
 
 	}
@@ -58,7 +58,7 @@ public class UserService implements IUserService {
 	}
 
 	@Override
-	public user search(Long id) {
+	public user search(long id) {
         return UR.getById(id);
 	}
 

@@ -12,7 +12,8 @@ import javax.persistence.Table;
 @Table(name="professor")
 
 public class professor extends user {
-	
+
+
 	private static final long serialVersionUID = 1L;
 	
 	
@@ -23,8 +24,12 @@ public class professor extends user {
 	private List<course> courses;
 
 	
-	public professor(String grade_prof, List<course> courses) {
-		super();
+	
+
+
+	public professor(Long id_user2, String name2, String surname2, String pseudo2, String email2, String tel2,
+			String country2, tn.enicarthage.entities.Role role2, String grade_prof, List<course> courses) {
+		super(id_user2, name2, surname2, pseudo2, email2, tel2, country2, role2);
 		this.grade_prof = grade_prof;
 		this.courses = courses;
 	}

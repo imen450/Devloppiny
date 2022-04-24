@@ -28,7 +28,7 @@ public class course implements Serializable {
 	@Id
 	@GeneratedValue(strategy = GenerationType.AUTO)
 	@Column(name="C_ID")
-	private Long id_cou;
+	private long id_cou;
 	
 	@Column(name="C_title")
 	private String title_cou;
@@ -54,7 +54,7 @@ public class course implements Serializable {
     
     
 
-	public course(Long id_cou, String title_cou, String description_cou, List<Feedback> feedbacks, String level_cou,
+	public course(long id_cou, String title_cou, String description_cou, List<Feedback> feedbacks, String level_cou,
 			String duration, List<chapter> chapitres, professor prof) {
 		super();
 		this.id_cou = id_cou;
@@ -67,11 +67,11 @@ public class course implements Serializable {
 		this.prof = prof;
 	}
 
-	public Long getId_cou() {
+	public long getId_cou() {
 		return id_cou;
 	}
 
-	public void setId_cou(Long id_cou) {
+	public void setId_cou(long id_cou) {
 		this.id_cou = id_cou;
 	}
 

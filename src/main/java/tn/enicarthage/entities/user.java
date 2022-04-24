@@ -24,7 +24,7 @@ public class user implements Serializable {
 
 		@Id
 		@Column(name="U_ID")
-		private Long id_user;
+		private long id_user;
 		
 		@Column(name="Name")
 		private String name;
@@ -47,19 +47,17 @@ public class user implements Serializable {
 		@Enumerated(EnumType.STRING)
 		private Role Role;
 		
-		
 
-		public user(Long id_user, String name, String surname, String pseudo, String email, String tel, String country,
-				tn.enicarthage.entities.Role role) {
-			super();
-			this.id_user = id_user;
-			this.name = name;
-			this.surname = surname;
-			this.pseudo = pseudo;
-			this.email = email;
-			this.tel = tel;
-			this.country = country;
-			Role = role;
+		public user(long id_user2, String name2, String surname2, String pseudo2, String email2, String tel2,
+				String country2, tn.enicarthage.entities.Role role2) {
+			this.id_user=id_user2;
+			this.name=name2;
+			this.surname=surname2;
+			this.pseudo=pseudo2;
+			this.email=email2;
+			this.tel=tel2;
+			this.country=country2;
+			this.Role=role2;
 		}
 
 		public Role getRole() {
@@ -70,11 +68,11 @@ public class user implements Serializable {
 			Role = role;
 		}
 
-		public Long getId_user() {
+		public long getId_user() {
 			return id_user;
 		}
 
-		public void setId_user(Long id_user) {
+		public void setId_user(long id_user) {
 			this.id_user = id_user;
 		}
 

@@ -26,8 +26,10 @@ public class Student extends user {
 	private List<Feedback> feedbacks ;
 	
 
-	public Student(String university, String diplome, List<Feedback> feedbacks) {
-		super();
+	public Student(Long id_user2, String name2, String surname2, String pseudo2, String email2, String tel2,
+			String country2, tn.enicarthage.entities.Role role2, String university, String diplome,
+			List<Feedback> feedbacks) {
+		super(id_user2, name2, surname2, pseudo2, email2, tel2, country2, role2);
 		this.university = university;
 		this.diplome = diplome;
 		this.feedbacks = feedbacks;
